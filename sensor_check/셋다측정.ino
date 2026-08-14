@@ -7,7 +7,7 @@
 // ==================================================
 #define TEMP_PIN 4   // DS18B20 DATA → D2
 #define PH_PIN A1    // pH 센서 A/PO → A1
-#define DO_PIN A2    // DO 센서 DO → A2
+#define DO_PIN A5    // DO 센서 DO → A2
 
 // ==================================================
 // UNO Q ADC 설정
@@ -25,8 +25,8 @@
 #define PH7_BUFFER_VALUE 7.00
 #define PH4_BUFFER_VALUE 4.00
 
-#define PH7_VOLTAGE 1.069
-#define PH4_VOLTAGE 0.841
+#define PH7_VOLTAGE 1.142
+#define PH4_VOLTAGE 0.888
 
 // pH 4·7 캘리브레이션 당시 평균 수온
 #define PH_CALIBRATION_T 25.47
@@ -35,9 +35,8 @@
 // DO 캘리브레이션값
 // 캘리브레이션 후 실제 포화전압(mV)으로 변경
 // ==================================================
-#define DO_CAL_V 0.0
-#define DO_CAL_T 25.0
-
+#define DO_CAL_V 1505.0
+#define DO_CAL_T 25.4   // 캘리브레이션 당시 DS18B20 수온으로 수정
 OneWire oneWire(TEMP_PIN);
 
 byte temperatureAddress[8];
